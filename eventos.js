@@ -10,6 +10,7 @@ fetch('https://servicodados.ibge.gov.br/api/v1/localidades/regioes')
     });
 
 const criarListaEstado = (id) => {
+    document.getElementById('estado').innerHTML = '<option selected >--Selecione--</option>';
     fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/regioes/${id}/estados`)
         .then( resposta => resposta.json())
         .then( res => {
@@ -28,6 +29,7 @@ const criarListaEstado = (id) => {
 };
 
 const criarListaCidade = (id) => {
+    document.getElementById('cidade').innerHTML = '<option selected >--Selecione--</option>';
     fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${id}/distritos`)
         .then( resposta => resposta.json())
         .then( res => { 
