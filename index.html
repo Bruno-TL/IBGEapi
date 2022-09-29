@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body class="container">
     <h1 class="mt-5">IBGE</h1>
@@ -13,20 +16,31 @@
 
     <form >
         <label for="">Região</label>
-        <select id="regiao" class="form-control mb-3">
-            <option id="optRegiao" selected >--Selecione--</option>
+        <select onchange="criarListaEstado(this.value)" id="regiao" class="form-control mb-3 bg-danger bg-opacity-10">
+            <option selected >--Selecione--</option>
         </select>
 
         <label for="">Estado</label>
-        <select id="estado" class="form-control mb-3">
+        <select id="estado" onchange="criarListaCidade(this.value)" class="form-control mb-3 bg-success bg-opacity-10">
             <option selected >--Selecione--</option>
         </select>
 
         <label for="">Cidade</label>
-        <select id="cidade" class="form-control mb-3">
+        <select id="cidade" onchange="pegandoValueCidade(this.value)" class="form-control mb-3 bg-info bg-opacity-10">
             <option selected >--Selecione--</option>
         </select>
     </form>
+
+    <section class="row justify-content-center h-25">
+        <div id="regiaoTexto" class="col-4 border border-danger bg-danger bg-opacity-10 rounded-3 me-2 w-25 d-none h-100 text-center">
+        </div>
+        <div id="estadoTexto" class="col-4 border border-success bg-success bg-opacity-10 rounded-3 me-2 w-25 d-none h-100 text-center"></div>
+        <div id="cidadeTexto" class="col-4 border border-info bg-info bg-opacity-10 rounded-3 me-2 w-25 d-none h-100 text-center"></div>
+    </section>
+
+    <footer class="row  h-25">
+        <h2 class="text-center">TALVEZ DEMORE PARA CARREGAR,  ESPERE UM POUCO QUE VAI DÁ CERTO.</h2>
+    </footer>
 
 
     <script src="eventos.js"></script>

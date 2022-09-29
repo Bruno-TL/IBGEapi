@@ -1,0 +1,17 @@
+.aparecer {
+    display: flex !important;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+body{
+    height: 100vh;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
