@@ -1,5 +1,5 @@
 ## IBGEapi
-# Nesse projeto estou cosumindo a Api do IBGE para pegar o REGIÃO, ESTADO e CIDADE.
+# Nesse projeto estou cosumindo a Api do IBGE para pegar a REGIÃO, ESTADO e CIDADE.
 -------
 # Usando Fetch(js)...Bootstrap...
 -----
